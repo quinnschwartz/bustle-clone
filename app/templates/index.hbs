@@ -1,0 +1,9 @@
+{{outlet}}
+
+<h2>Bustle Main Page</h2>
+
+<ul>
+  {{#each model as |story|}}
+    <li>{{story.author}} {{story.title}} {{story.content}} {{story.image}}</li>
+  {{/each}}
+</ul>
