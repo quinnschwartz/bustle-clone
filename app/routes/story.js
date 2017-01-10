@@ -4,4 +4,10 @@ export default Ember.Route.extend({
   model(params){
     return this.store.findRecord('story', params.story_id);
   },
+  actions:{
+    destroyStory(story) {
+      story.destroyRecord();
+      this.transitionTo('index');
+    }  
+  }
 });
