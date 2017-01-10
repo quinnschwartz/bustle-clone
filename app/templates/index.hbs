@@ -4,6 +4,6 @@
 
 <ul>
   {{#each model as |story|}}
-    <li>{{story.author}} {{story.title}} {{story.content}} {{story.image}}</li>
+    <li>{{#link-to 'story' story.id}}{{story.title}} <br> <img src={{story.image}}>{{/link-to}}<br> By {{story.author}}<br></li>
   {{/each}}
 </ul>
